@@ -3,10 +3,11 @@
 CIQUAL importation
 ====
 
-A famous nutritionist is in need of a serach engine dedicated to nutrional data.
+A famous nutritionist is in need of a search engine dedicated to nutrional data.
 As for now, he only has access to the following CIQUAL table : https://pro.anses.fr/tableciqual/Documents/Table_Ciqual_2016.csv
 
-He is asking you to help him build a modern REST API that would help him look into this database and match a string against the labels in the database.
+He is asking you to help him build a modern REST API to look into this database and match a string against the value of columns ORIGGPFR
+ and ORIGFDNM.
 
 Features
 ----
@@ -56,9 +57,9 @@ Please create a repository on Github and send us its link.
 
 ### How is the exam graded?
 
-We are looking for idiomatic use of symfony, and the ability to solve the problems with code that is clean and easy to read. Even though it's very small in scope, please show us how you would use the language and conventions to structure things in a clear and maintainable way.
+We are looking for idiomatic use of php/symfony, and the ability to solve the problems with code that is clean and easy to read. Even though it's very small in scope, please show us how you would use the language and conventions to structure things in a clear and maintainable way.
 
-Think of it as part of an application : the organisation has to be compatible with a larger project.
+Think of it as part of an application : the organisation has to be compatible with a larger project. Try to use Symfony best standards.
 
 ### This looks like it will take a while and I'm pretty busy
 
