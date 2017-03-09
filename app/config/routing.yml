@@ -1,0 +1,12 @@
+ciqual:
+    resource: "@CiqualBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+api:
+    resource: '.'
+    type:     'api_platform'
+
+app:
+    resource: '@AppBundle/Action/'
+    type:     'annotation'

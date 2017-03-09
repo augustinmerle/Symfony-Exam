@@ -1,0 +1,4 @@
+services:
+#    ciqual.example:
+#        class: CiqualBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
