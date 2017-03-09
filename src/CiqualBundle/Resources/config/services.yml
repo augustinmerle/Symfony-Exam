@@ -1,5 +1,11 @@
 services:
     fmu.ciqual.aggregator.data:
-            class: CiqualBundle\Aggregator\CiqualDataAggregator
-            arguments:
-            #  - '%competitor_price_url%'
+        class: CiqualBundle\Aggregator\CiqualDataAggregator
+        arguments:
+          - '@fmu.ciqual.manager'
+        #  - '%competitor_price_url%'
+    fmu.ciqual.manager:
+        class: CiqualBundle\Service\CiqualManager
+        arguments:
+            - '@doctrine.orm.entity_manager'
+        #    - '@fmu.price.repository.pricing_zone'

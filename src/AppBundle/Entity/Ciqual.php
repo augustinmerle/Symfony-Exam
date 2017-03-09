@@ -34,7 +34,7 @@ class Ciqual
     /**
      * @var string Something else
      *
-     * @ORM\Column
+     * @ORM\Column(type="string", nullable=true)
      * @Assert\NotBlank
      */
     private $ORIGGPCD;
@@ -42,7 +42,7 @@ class Ciqual
     /**
      * @var string ingredient cat
      *
-     * @ORM\Column
+     * @ORM\Column(type="string", nullable=true)
      * @Assert\NotBlank
      */
     private $ORIGGPFR;
@@ -50,7 +50,7 @@ class Ciqual
     /**
      * @var string ingredient hash
      *
-     * @ORM\Column
+     * @ORM\Column(type="string", nullable=true)
      * @Assert\NotBlank
      */
     private $ORIGFDCD;
@@ -58,7 +58,7 @@ class Ciqual
     /**
      * @var string ingredient name
      *
-     * @ORM\Column
+     * @ORM\Column(type="string", nullable=true)
      * @Assert\NotBlank
      */
     private $ORIGFDNM;
@@ -66,16 +66,16 @@ class Ciqual
     /**
      * @var string Règlement UE N° 1169/2011 (kJ/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Energie;
 
     /**
      * @var string Energie, N x facteur Jones, avec fibres  (kJ/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Energie2;
 
@@ -83,456 +83,456 @@ class Ciqual
     /**
      * @var string water (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Eau;
 
     /**
      * @var string water (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Proteines;
 
     /**
      * @var string protein N x 6.25 (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Proteines_brutes;
 
     /**
      * @var string water (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Glucides;
 
     /**
      * @var string water (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Lipides;
 
     /**
      * @var string water (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Sucres;
 
     /**
      * @var string water (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Amidon;
 
     /**
      * @var string water (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Fibres_alimentaires;
 
     /**
      * @var string water (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Polyols_totaux;
 
     /**
      * @var string water (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Cendres;
 
     /**
      * @var string water (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Alcool;
 
     /**
      * @var string water (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Acides_organiques;
 
     /**
      * @var string $AG_satures (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $AG_satures;
 
     /**
      * @var string $AG_monoinsatures (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $AG_monoinsatures;
 
     /**
      * @var string AG_polyinsatures (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $AG_polyinsatures;
 
     /**
      * @var string AG40_butyrique (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $AG40_butyrique;
 
     /**
      * @var string $AG60_caproique (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $AG60_caproique;
 
     /**
      * @var string $AG60_caproique (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $AG80_caprylique;
 
     /**
      * @var string $AG60_caproique (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $AG100_caprique;
 
     /**
      * @var string $AG60_caproique (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $AG120_laurique;
 
     /**
      * @var string $AG60_caproique (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $AG140_myristique;
 
     /**
      * @var string $AG60_caproique (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $AG160_palmitique;
 
     /**
      * @var string $AG60_caproique (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $AG180_stearique;
 
     /**
      * @var string $AG60_caproique (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $AG1819c_oleique;
 
     /**
      * @var string $AG60_caproique (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $AG1829c_linoleique;
 
     /**
      * @var string $AG60_caproique (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $AG183c9_alpha_linolenique;
 
     /**
      * @var string $AG60_caproique (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $AG2045c_arachidonique;
 
     /**
      * @var string $AG60_caproique (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $AG2055c_EPA;
 
     /**
      * @var string $AG60_caproique (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $AG2264c_DHA;
 
     /**
      * @var string $AG60_caproique (mg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Cholesterol;
 
     /**
      * @var string $AG60_caproique (g/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Sel_chlorure_sodium;
 
     /**
      * @var string $Calcium (mg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Calcium;
 
     /**
      * @var string $Chlorure (mg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Chlorure;
 
     /**
      * @var string $Cuivre (mg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Cuivre;
 
     /**
      * @var string $Fer (mg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Fer;
 
     /**
      * @var string $Iode (µg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Iode;
 
     /**
      * @var string $Magnesium (mg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Magnesium;
 
     /**
      * @var string $Manganese (mg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Manganese;
 
     /**
      * @var string $Phosphore (mg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Phosphore;
 
     /**
      * @var string $Potassium (mg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Potassium;
 
     /**
      * @var string $Selenium (µg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Selenium;
 
     /**
      * @var string $Sodium (mg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Sodium;
 
     /**
      * @var string $Zinc (mg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Zinc;
 
     /**
      * @var string $Retinol; (µg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Retinol;
 
     /**
      * @var string $Beta_Carotene (µg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $Beta_Carotene;
 
     /**
      * @var string $VitamineD (µg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $VitamineD;
 
     /**
      * @var string $VitamineE (mg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $VitamineE;
 
     /**
      * @var string $VitamineK1 (µg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $VitamineK1;
 
     /**
      * @var string $VitamineK2 (µg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $VitamineK2;
 
     /**
      * @var string $VitamineC (mg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $VitamineC;
 
     /**
      * @var string $VitamineB1 ou Thiamine (mg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $VitamineB1;
 
     /**
      * @var string $VitamineB2 ou Riboflavine (mg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $VitamineB2;
 
     /**
      * @var string $VitamineB3 ou PP ou Niacine (mg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $VitamineB3;
 
     /**
      * @var string $VitamineB5 ou Acide pantothenique (mg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $VitamineB5;
 
     /**
      * @var string $VitamineB6 (mg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $VitamineB6;
 
     /**
      * @var string $VitamineB9 ou Folates totaux (µg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $VitamineB9;
 
     /**
      * @var string $VitamineB12 (µg/100g)
      *
-     * @ORM\Column
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", nullable=true)
+     *
      */
     private $VitamineB12;
 
