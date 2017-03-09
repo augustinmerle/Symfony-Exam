@@ -1,11 +1,12 @@
 ciqual:
     resource: "@CiqualBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /cirqual
 
 api:
     resource: '.'
     type:     'api_platform'
+    prefix:   /api
 
 app:
     resource: '@AppBundle/Action/'

@@ -7,3 +7,7 @@ services:
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+    cirqual.search_filter:
+        parent:    'api_platform.doctrine.orm.search_filter'
+        arguments: [ { id: 'exact', ORIGGPFR: 'exact', ORIGFDCD: 'exact', ORIGFDNM: 'partial' } ]
+        tags:      [ { name: 'api_platform.filter', id: 'cirqual.search' } ]

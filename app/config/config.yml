@@ -80,3 +80,8 @@ nelmio_cors:
         max_age:        3600
     paths:
         '^/': ~
+api_platform:
+    title: 'Foodmeup Cirqual API'
+    # The description of the API.
+    description: 'Foodmeup Nutriment database API'
+    version: '0.1.0'

@@ -1,0 +1,532 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use ApiPlatform\Core\Annotation\ApiResource;
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+/**
+ * Ciqual ressource Entity
+ *
+ * @ApiResource
+ * @ORM\Entity
+ */
+class Ciqual
+{
+    /**
+     * @var int The entity Id
+     *
+     * @ORM\Id
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
+     */
+    private $id;
+
+    /**
+     * @var string Something else
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $ORIGGPCD;
+
+    /**
+     * @var string ingredient cat
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $ORIGGPFR;
+
+    /**
+     * @var string ingredient hash
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $ORIGFDCD;
+
+    /**
+     * @var string ingredient name
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $ORIGFDNM;
+
+    /**
+     * @var string Règlement UE N° 1169/2011 (kJ/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Energie;
+
+    /**
+     * @var string Energie, N x facteur Jones, avec fibres  (kJ/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Energie2;
+
+
+    /**
+     * @var string water (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Eau;
+
+    /**
+     * @var string water (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Protéines;
+
+    /**
+     * @var string protein N x 6.25 (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Protéines_brutes;
+
+    /**
+     * @var string water (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Glucides;
+
+    /**
+     * @var string water (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Lipides;
+
+    /**
+     * @var string water (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Sucres;
+
+    /**
+     * @var string water (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Amidon;
+
+    /**
+     * @var string water (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Fibres_alimentaires;
+
+    /**
+     * @var string water (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Polyols_totaux;
+
+    /**
+     * @var string water (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Cendres;
+
+    /**
+     * @var string water (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Alcool;
+
+    /**
+     * @var string water (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Acides_organiques;
+
+    /**
+     * @var string $AG_satures (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $AG_satures;
+
+    /**
+     * @var string $AG_monoinsatures (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $AG_monoinsatures;
+
+    /**
+     * @var string AG_polyinsatures (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $AG_polyinsatures;
+
+    /**
+     * @var string AG40_butyrique (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $AG40_butyrique;
+
+    /**
+     * @var string $AG60_caproique (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $AG60_caproique;
+
+    /**
+     * @var string $AG60_caproique (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $AG80_caprylique;
+
+    /**
+     * @var string $AG60_caproique (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $AG100_caprique;
+
+    /**
+     * @var string $AG60_caproique (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $AG120_laurique;
+
+    /**
+     * @var string $AG60_caproique (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $AG140_myristique;
+
+    /**
+     * @var string $AG60_caproique (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $AG160_palmitique;
+
+    /**
+     * @var string $AG60_caproique (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $AG180_stéarique;
+
+    /**
+     * @var string $AG60_caproique (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $AG1819c_oleique;
+
+    /**
+     * @var string $AG60_caproique (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $AG1829c_linoleique;
+
+    /**
+     * @var string $AG60_caproique (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $AG183c9_alpha_linolenique;
+
+    /**
+     * @var string $AG60_caproique (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $AG2045c_arachidonique;
+
+    /**
+     * @var string $AG60_caproique (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $AG2055c_EPA;
+
+    /**
+     * @var string $AG60_caproique (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $AG2264c_DHA;
+
+    /**
+     * @var string $AG60_caproique (mg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Cholestérol;
+
+    /**
+     * @var string $AG60_caproique (g/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Sel_chlorure_sodium;
+
+    /**
+     * @var string $Calcium (mg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Calcium;
+
+    /**
+     * @var string $Chlorure (mg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Chlorure;
+
+    /**
+     * @var string $Cuivre (mg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Cuivre;
+
+    /**
+     * @var string $Fer (mg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Fer;
+
+    /**
+     * @var string $Iode (µg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Iode;
+
+    /**
+     * @var string $Magnesium (mg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Magnesium;
+
+    /**
+     * @var string $Manganese (mg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Manganese;
+
+    /**
+     * @var string $Phosphore (mg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Phosphore;
+
+    /**
+     * @var string $Potassium (mg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Potassium;
+
+    /**
+     * @var string $Sélénium (µg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Selenium;
+
+    /**
+     * @var string $Sodium (mg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Sodium;
+
+    /**
+     * @var string $Zinc (mg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Zinc;
+
+    /**
+     * @var string $Rétinol; (µg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Rétinol;
+
+    /**
+     * @var string $Beta_Carotene (µg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $Beta_Carotene;
+
+    /**
+     * @var string $VitamineD (µg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $VitamineD;
+
+    /**
+     * @var string $VitamineE (mg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $VitamineE;
+
+    /**
+     * @var string $VitamineK1 (µg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $VitamineK1;
+
+    /**
+     * @var string $VitamineK2 (µg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $VitamineK2;
+
+    /**
+     * @var string $VitamineC (mg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $VitamineC;
+
+    /**
+     * @var string $VitamineB1 ou Thiamine (mg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $VitamineB1;
+
+    /**
+     * @var string $VitamineB2 ou Riboflavine (mg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $VitamineB2;
+
+    /**
+     * @var string $VitamineB3 ou PP ou Niacine (mg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $VitamineB3;
+
+    /**
+     * @var string $VitamineB5 ou Acide pantothénique (mg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $VitamineB5;
+
+    /**
+     * @var string $VitamineB6 (mg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $VitamineB6;
+
+    /**
+     * @var string $VitamineB9 ou Folates totaux (µg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $VitamineB9;
+
+    /**
+     * @var string $VitamineB12 (µg/100g)
+     *
+     * @ORM\Column
+     * @Assert\NotBlank
+     */
+    private $VitamineB12;
+
+
+}
