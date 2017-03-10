@@ -18,12 +18,13 @@ class CiqualDataAggregator
     {
         $this->ciqualManager = $ciqualManager;
         $this->url = 'https://pro.anses.fr/TableCIQUAL/Documents/';
-
     }
 
     /**
      * @param string|null $date
-     * @return array
+     *
+     * @return CiqualDataAggregator
+     *
      * @throws \Exception
      */
     private function serializeCiqualData($data) : array
@@ -37,47 +38,45 @@ class CiqualDataAggregator
         $data = mb_convert_encoding($data, 'UTF-8', 'ISO-8859-1');
 
         $responseDecoded = $serializer->decode($data, 'csv');
-        foreach ($responseDecoded as $line)
-        {
-
-            $this->ciqualManager->createNewCirqual($serializer->denormalize($line, Ciqual::class, 'csv' ));
-        }
-
         if ($responseDecoded === false || is_null($responseDecoded)) {
             throw new \Exception('failure to decode csv response');
         }
-        return $responseDecoded;
+        foreach ($responseDecoded as $line) {
+            $this->ciqualManager->createNewCirqual($serializer->denormalize($line, Ciqual::class, 'csv'));
+        }
+
+        return $this;
     }
 
     /**
      * @param string|null $date
+     *
      * @return array
+     *
      * @throws \Exception
      */
     public function getCiqualByUrl()
     {
-      $serviceUrl = $this->url.'Table_Ciqual_2016.csv';
-      $curl = curl_init($serviceUrl);
-      if ($curl === false) {
-          throw new \Exception('curl connection failed');
-      }
+        $serviceUrl = $this->url.'Table_Ciqual_2016.csv';
+        $curl = curl_init($serviceUrl);
+        if ($curl === false) {
+            throw new \Exception('curl connection failed');
+        }
 
-      curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-      curl_setopt($curl, CURLOPT_ENCODING ,"ISO-8859-1");
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($curl, CURLOPT_ENCODING, 'ISO-8859-1');
+        $curlResponse = curl_exec($curl);
+        if ($curlResponse === false) {
+            throw new \Exception('There is an error in executing the curl session');
+        }
+        curl_close($curl);
 
-      $curlResponse = curl_exec($curl);
-      if ($curlResponse === false) {
-          throw new \Exception('There is an error in executing the curl session');
-      }
-      curl_close($curl);
-
-      return $this->serializeCiqualData($curlResponse);
-
+        return $this->serializeCiqualData($curlResponse);
     }
 
     public function getCiqualByLocalFile($filePath)
     {
-        if (is_file($filePath)){
+        if (is_file($filePath)) {
             $data = file_get_contents($filePath);
         }
 

@@ -1,4 +1,5 @@
 <?php
+
 namespace CiqualBundle\Normalizer;
 
 use Symfony\Component\Serializer\NameConverter\NameConverterInterface;
@@ -78,15 +79,13 @@ class CiqualNameConverter implements NameConverterInterface
      */
     private $attributes;
 
-
     /**
-     * @param null|array $attributes     The list of attributes to rename or null for all attributes
+     * @param null|array $attributes The list of attributes to rename or null for all attributes
      */
     public function __construct(array $attributes = null, $lowerCamelCase = true)
     {
         $this->attributes = $attributes;
     }
-
 
     public function normalize($propertyName)
     {
@@ -95,7 +94,6 @@ class CiqualNameConverter implements NameConverterInterface
 
     public function denormalize($propertyName)
     {
-        // remove org_ prefix
-        return array_key_exists($propertyName,$this->fields)? $this->fields[$propertyName]:$propertyName;
+        return array_key_exists($propertyName, $this->fields) ? $this->fields[$propertyName] : $propertyName;
     }
 }

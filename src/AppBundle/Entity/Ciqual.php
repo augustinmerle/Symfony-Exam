@@ -7,14 +7,14 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Ciqual ressource Entity
+ * Ciqual ressource Entity.
  *
  * @ApiResource(
  *    attributes={
  *      "filters"={"ciqual.search", "ciqual.search.name"}
  *    },
  *    itemOperations={
- *      "get"={"method"="GET", "path"="/cirqual/{id}"}
+ *      "get"={"method"="GET", "path"="/cirqual/{ORIGFDCD}"}
  *    }
  *
  * )
@@ -35,7 +35,6 @@ class Ciqual
      * @var string Something else
      *
      * @ORM\Column(type="string", nullable=true)
-     * 
      */
     private $ORIGGPCD;
 
@@ -43,7 +42,6 @@ class Ciqual
      * @var string ingredient cat
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $ORIGGPFR;
 
@@ -51,7 +49,6 @@ class Ciqual
      * @var string ingredient hash
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $ORIGFDCD;
 
@@ -67,7 +64,6 @@ class Ciqual
      * @var string Règlement UE N° 1169/2011 (kJ/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Energie;
 
@@ -75,16 +71,13 @@ class Ciqual
      * @var string Energie, N x facteur Jones, avec fibres  (kJ/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Energie2;
-
 
     /**
      * @var string water (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Eau;
 
@@ -92,7 +85,6 @@ class Ciqual
      * @var string water (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Proteines;
 
@@ -100,7 +92,6 @@ class Ciqual
      * @var string protein N x 6.25 (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Proteines_brutes;
 
@@ -108,7 +99,6 @@ class Ciqual
      * @var string water (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Glucides;
 
@@ -116,7 +106,6 @@ class Ciqual
      * @var string water (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Lipides;
 
@@ -124,7 +113,6 @@ class Ciqual
      * @var string water (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Sucres;
 
@@ -132,7 +120,6 @@ class Ciqual
      * @var string water (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Amidon;
 
@@ -140,7 +127,6 @@ class Ciqual
      * @var string water (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Fibres_alimentaires;
 
@@ -148,7 +134,6 @@ class Ciqual
      * @var string water (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Polyols_totaux;
 
@@ -156,7 +141,6 @@ class Ciqual
      * @var string water (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Cendres;
 
@@ -164,7 +148,6 @@ class Ciqual
      * @var string water (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Alcool;
 
@@ -172,23 +155,20 @@ class Ciqual
      * @var string water (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Acides_organiques;
 
     /**
-     * @var string $AG_satures (g/100g)
+     * @var string (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $AG_satures;
 
     /**
-     * @var string $AG_monoinsatures (g/100g)
+     * @var string (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $AG_monoinsatures;
 
@@ -196,7 +176,6 @@ class Ciqual
      * @var string AG_polyinsatures (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $AG_polyinsatures;
 
@@ -204,344 +183,300 @@ class Ciqual
      * @var string AG40_butyrique (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $AG40_butyrique;
 
     /**
-     * @var string $AG60_caproique (g/100g)
+     * @var string (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $AG60_caproique;
 
     /**
-     * @var string $AG60_caproique (g/100g)
+     * @var string (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $AG80_caprylique;
 
     /**
-     * @var string $AG60_caproique (g/100g)
+     * @var string (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $AG100_caprique;
 
     /**
-     * @var string $AG60_caproique (g/100g)
+     * @var string (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $AG120_laurique;
 
     /**
-     * @var string $AG60_caproique (g/100g)
+     * @var string (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $AG140_myristique;
 
     /**
-     * @var string $AG60_caproique (g/100g)
+     * @var string (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $AG160_palmitique;
 
     /**
-     * @var string $AG60_caproique (g/100g)
+     * @var string (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $AG180_stearique;
 
     /**
-     * @var string $AG60_caproique (g/100g)
+     * @var string (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $AG1819c_oleique;
 
     /**
-     * @var string $AG60_caproique (g/100g)
+     * @var string (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $AG1829c_linoleique;
 
     /**
-     * @var string $AG60_caproique (g/100g)
+     * @var string (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $AG183c9_alpha_linolenique;
 
     /**
-     * @var string $AG60_caproique (g/100g)
+     * @var string (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $AG2045c_arachidonique;
 
     /**
-     * @var string $AG60_caproique (g/100g)
+     * @var string (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $AG2055c_EPA;
 
     /**
-     * @var string $AG60_caproique (g/100g)
+     * @var string (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $AG2264c_DHA;
 
     /**
-     * @var string $AG60_caproique (mg/100g)
+     * @var string (mg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Cholesterol;
 
     /**
-     * @var string $AG60_caproique (g/100g)
+     * @var string (g/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Sel_chlorure_sodium;
 
     /**
-     * @var string $Calcium (mg/100g)
+     * @var string (mg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Calcium;
 
     /**
-     * @var string $Chlorure (mg/100g)
+     * @var string (mg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Chlorure;
 
     /**
-     * @var string $Cuivre (mg/100g)
+     * @var string (mg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Cuivre;
 
     /**
-     * @var string $Fer (mg/100g)
+     * @var string (mg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Fer;
 
     /**
-     * @var string $Iode (µg/100g)
+     * @var string (µg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Iode;
 
     /**
-     * @var string $Magnesium (mg/100g)
+     * @var string (mg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Magnesium;
 
     /**
-     * @var string $Manganese (mg/100g)
+     * @var string (mg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Manganese;
 
     /**
-     * @var string $Phosphore (mg/100g)
+     * @var string (mg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Phosphore;
 
     /**
-     * @var string $Potassium (mg/100g)
+     * @var string (mg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Potassium;
 
     /**
-     * @var string $Selenium (µg/100g)
+     * @var string (µg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Selenium;
 
     /**
-     * @var string $Sodium (mg/100g)
+     * @var string (mg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Sodium;
 
     /**
-     * @var string $Zinc (mg/100g)
+     * @var string (mg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Zinc;
 
     /**
-     * @var string $Retinol; (µg/100g)
+     * @var string; (µg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Retinol;
 
     /**
-     * @var string $Beta_Carotene (µg/100g)
+     * @var string (µg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $Beta_Carotene;
 
     /**
-     * @var string $VitamineD (µg/100g)
+     * @var string (µg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $VitamineD;
 
     /**
-     * @var string $VitamineE (mg/100g)
+     * @var string (mg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $VitamineE;
 
     /**
-     * @var string $VitamineK1 (µg/100g)
+     * @var string (µg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $VitamineK1;
 
     /**
-     * @var string $VitamineK2 (µg/100g)
+     * @var string (µg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $VitamineK2;
 
     /**
-     * @var string $VitamineC (mg/100g)
+     * @var string (mg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $VitamineC;
 
     /**
-     * @var string $VitamineB1 ou Thiamine (mg/100g)
+     * @var string ou Thiamine (mg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $VitamineB1;
 
     /**
-     * @var string $VitamineB2 ou Riboflavine (mg/100g)
+     * @var string ou Riboflavine (mg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $VitamineB2;
 
     /**
-     * @var string $VitamineB3 ou PP ou Niacine (mg/100g)
+     * @var string ou PP ou Niacine (mg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $VitamineB3;
 
     /**
-     * @var string $VitamineB5 ou Acide pantothenique (mg/100g)
+     * @var string ou Acide pantothenique (mg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $VitamineB5;
 
     /**
-     * @var string $VitamineB6 (mg/100g)
+     * @var string (mg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $VitamineB6;
 
     /**
-     * @var string $VitamineB9 ou Folates totaux (µg/100g)
+     * @var string ou Folates totaux (µg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $VitamineB9;
 
     /**
-     * @var string $VitamineB12 (µg/100g)
+     * @var string (µg/100g)
      *
      * @ORM\Column(type="string", nullable=true)
-     *
      */
     private $VitamineB12;
 
-
-
     /**
-     * Get id
+     * Get id.
      *
-     * @return integer
+     * @return int
      */
     public function getId()
     {
@@ -549,7 +484,7 @@ class Ciqual
     }
 
     /**
-     * Set oRIGGPCD
+     * Set oRIGGPCD.
      *
      * @param string $oRIGGPCD
      *
@@ -563,7 +498,7 @@ class Ciqual
     }
 
     /**
-     * Get oRIGGPCD
+     * Get oRIGGPCD.
      *
      * @return string
      */
@@ -573,7 +508,7 @@ class Ciqual
     }
 
     /**
-     * Set oRIGGPFR
+     * Set oRIGGPFR.
      *
      * @param string $oRIGGPFR
      *
@@ -587,7 +522,7 @@ class Ciqual
     }
 
     /**
-     * Get oRIGGPFR
+     * Get oRIGGPFR.
      *
      * @return string
      */
@@ -597,7 +532,7 @@ class Ciqual
     }
 
     /**
-     * Set oRIGFDCD
+     * Set oRIGFDCD.
      *
      * @param string $oRIGFDCD
      *
@@ -611,7 +546,7 @@ class Ciqual
     }
 
     /**
-     * Get oRIGFDCD
+     * Get oRIGFDCD.
      *
      * @return string
      */
@@ -621,7 +556,7 @@ class Ciqual
     }
 
     /**
-     * Set oRIGFDNM
+     * Set oRIGFDNM.
      *
      * @param string $oRIGFDNM
      *
@@ -635,7 +570,7 @@ class Ciqual
     }
 
     /**
-     * Get oRIGFDNM
+     * Get oRIGFDNM.
      *
      * @return string
      */
@@ -645,7 +580,7 @@ class Ciqual
     }
 
     /**
-     * Set energie
+     * Set energie.
      *
      * @param string $energie
      *
@@ -659,7 +594,7 @@ class Ciqual
     }
 
     /**
-     * Get energie
+     * Get energie.
      *
      * @return string
      */
@@ -669,7 +604,7 @@ class Ciqual
     }
 
     /**
-     * Set energie2
+     * Set energie2.
      *
      * @param string $energie2
      *
@@ -683,7 +618,7 @@ class Ciqual
     }
 
     /**
-     * Get energie2
+     * Get energie2.
      *
      * @return string
      */
@@ -693,7 +628,7 @@ class Ciqual
     }
 
     /**
-     * Set eau
+     * Set eau.
      *
      * @param string $eau
      *
@@ -707,7 +642,7 @@ class Ciqual
     }
 
     /**
-     * Get eau
+     * Get eau.
      *
      * @return string
      */
@@ -717,7 +652,7 @@ class Ciqual
     }
 
     /**
-     * Set proteines
+     * Set proteines.
      *
      * @param string $proteines
      *
@@ -731,7 +666,7 @@ class Ciqual
     }
 
     /**
-     * Get proteines
+     * Get proteines.
      *
      * @return string
      */
@@ -741,7 +676,7 @@ class Ciqual
     }
 
     /**
-     * Set proteinesBrutes
+     * Set proteinesBrutes.
      *
      * @param string $proteinesBrutes
      *
@@ -755,7 +690,7 @@ class Ciqual
     }
 
     /**
-     * Get proteinesBrutes
+     * Get proteinesBrutes.
      *
      * @return string
      */
@@ -765,7 +700,7 @@ class Ciqual
     }
 
     /**
-     * Set glucides
+     * Set glucides.
      *
      * @param string $glucides
      *
@@ -779,7 +714,7 @@ class Ciqual
     }
 
     /**
-     * Get glucides
+     * Get glucides.
      *
      * @return string
      */
@@ -789,7 +724,7 @@ class Ciqual
     }
 
     /**
-     * Set lipides
+     * Set lipides.
      *
      * @param string $lipides
      *
@@ -803,7 +738,7 @@ class Ciqual
     }
 
     /**
-     * Get lipides
+     * Get lipides.
      *
      * @return string
      */
@@ -813,7 +748,7 @@ class Ciqual
     }
 
     /**
-     * Set sucres
+     * Set sucres.
      *
      * @param string $sucres
      *
@@ -827,7 +762,7 @@ class Ciqual
     }
 
     /**
-     * Get sucres
+     * Get sucres.
      *
      * @return string
      */
@@ -837,7 +772,7 @@ class Ciqual
     }
 
     /**
-     * Set amidon
+     * Set amidon.
      *
      * @param string $amidon
      *
@@ -851,7 +786,7 @@ class Ciqual
     }
 
     /**
-     * Get amidon
+     * Get amidon.
      *
      * @return string
      */
@@ -861,7 +796,7 @@ class Ciqual
     }
 
     /**
-     * Set fibresAlimentaires
+     * Set fibresAlimentaires.
      *
      * @param string $fibresAlimentaires
      *
@@ -875,7 +810,7 @@ class Ciqual
     }
 
     /**
-     * Get fibresAlimentaires
+     * Get fibresAlimentaires.
      *
      * @return string
      */
@@ -885,7 +820,7 @@ class Ciqual
     }
 
     /**
-     * Set polyolsTotaux
+     * Set polyolsTotaux.
      *
      * @param string $polyolsTotaux
      *
@@ -899,7 +834,7 @@ class Ciqual
     }
 
     /**
-     * Get polyolsTotaux
+     * Get polyolsTotaux.
      *
      * @return string
      */
@@ -909,7 +844,7 @@ class Ciqual
     }
 
     /**
-     * Set cendres
+     * Set cendres.
      *
      * @param string $cendres
      *
@@ -923,7 +858,7 @@ class Ciqual
     }
 
     /**
-     * Get cendres
+     * Get cendres.
      *
      * @return string
      */
@@ -933,7 +868,7 @@ class Ciqual
     }
 
     /**
-     * Set alcool
+     * Set alcool.
      *
      * @param string $alcool
      *
@@ -947,7 +882,7 @@ class Ciqual
     }
 
     /**
-     * Get alcool
+     * Get alcool.
      *
      * @return string
      */
@@ -957,7 +892,7 @@ class Ciqual
     }
 
     /**
-     * Set acidesOrganiques
+     * Set acidesOrganiques.
      *
      * @param string $acidesOrganiques
      *
@@ -971,7 +906,7 @@ class Ciqual
     }
 
     /**
-     * Get acidesOrganiques
+     * Get acidesOrganiques.
      *
      * @return string
      */
@@ -981,7 +916,7 @@ class Ciqual
     }
 
     /**
-     * Set aGSatures
+     * Set aGSatures.
      *
      * @param string $aGSatures
      *
@@ -995,7 +930,7 @@ class Ciqual
     }
 
     /**
-     * Get aGSatures
+     * Get aGSatures.
      *
      * @return string
      */
@@ -1005,7 +940,7 @@ class Ciqual
     }
 
     /**
-     * Set aGMonoinsatures
+     * Set aGMonoinsatures.
      *
      * @param string $aGMonoinsatures
      *
@@ -1019,7 +954,7 @@ class Ciqual
     }
 
     /**
-     * Get aGMonoinsatures
+     * Get aGMonoinsatures.
      *
      * @return string
      */
@@ -1029,7 +964,7 @@ class Ciqual
     }
 
     /**
-     * Set aGPolyinsatures
+     * Set aGPolyinsatures.
      *
      * @param string $aGPolyinsatures
      *
@@ -1043,7 +978,7 @@ class Ciqual
     }
 
     /**
-     * Get aGPolyinsatures
+     * Get aGPolyinsatures.
      *
      * @return string
      */
@@ -1053,7 +988,7 @@ class Ciqual
     }
 
     /**
-     * Set aG40Butyrique
+     * Set aG40Butyrique.
      *
      * @param string $aG40Butyrique
      *
@@ -1067,7 +1002,7 @@ class Ciqual
     }
 
     /**
-     * Get aG40Butyrique
+     * Get aG40Butyrique.
      *
      * @return string
      */
@@ -1077,7 +1012,7 @@ class Ciqual
     }
 
     /**
-     * Set aG60Caproique
+     * Set aG60Caproique.
      *
      * @param string $aG60Caproique
      *
@@ -1091,7 +1026,7 @@ class Ciqual
     }
 
     /**
-     * Get aG60Caproique
+     * Get aG60Caproique.
      *
      * @return string
      */
@@ -1101,7 +1036,7 @@ class Ciqual
     }
 
     /**
-     * Set aG80Caprylique
+     * Set aG80Caprylique.
      *
      * @param string $aG80Caprylique
      *
@@ -1115,7 +1050,7 @@ class Ciqual
     }
 
     /**
-     * Get aG80Caprylique
+     * Get aG80Caprylique.
      *
      * @return string
      */
@@ -1125,7 +1060,7 @@ class Ciqual
     }
 
     /**
-     * Set aG100Caprique
+     * Set aG100Caprique.
      *
      * @param string $aG100Caprique
      *
@@ -1139,7 +1074,7 @@ class Ciqual
     }
 
     /**
-     * Get aG100Caprique
+     * Get aG100Caprique.
      *
      * @return string
      */
@@ -1149,7 +1084,7 @@ class Ciqual
     }
 
     /**
-     * Set aG120Laurique
+     * Set aG120Laurique.
      *
      * @param string $aG120Laurique
      *
@@ -1163,7 +1098,7 @@ class Ciqual
     }
 
     /**
-     * Get aG120Laurique
+     * Get aG120Laurique.
      *
      * @return string
      */
@@ -1173,7 +1108,7 @@ class Ciqual
     }
 
     /**
-     * Set aG140Myristique
+     * Set aG140Myristique.
      *
      * @param string $aG140Myristique
      *
@@ -1187,7 +1122,7 @@ class Ciqual
     }
 
     /**
-     * Get aG140Myristique
+     * Get aG140Myristique.
      *
      * @return string
      */
@@ -1197,7 +1132,7 @@ class Ciqual
     }
 
     /**
-     * Set aG160Palmitique
+     * Set aG160Palmitique.
      *
      * @param string $aG160Palmitique
      *
@@ -1211,7 +1146,7 @@ class Ciqual
     }
 
     /**
-     * Get aG160Palmitique
+     * Get aG160Palmitique.
      *
      * @return string
      */
@@ -1221,7 +1156,7 @@ class Ciqual
     }
 
     /**
-     * Set aG180Stearique
+     * Set aG180Stearique.
      *
      * @param string $aG180Stearique
      *
@@ -1235,7 +1170,7 @@ class Ciqual
     }
 
     /**
-     * Get aG180Stearique
+     * Get aG180Stearique.
      *
      * @return string
      */
@@ -1245,7 +1180,7 @@ class Ciqual
     }
 
     /**
-     * Set aG1819cOleique
+     * Set aG1819cOleique.
      *
      * @param string $aG1819cOleique
      *
@@ -1259,7 +1194,7 @@ class Ciqual
     }
 
     /**
-     * Get aG1819cOleique
+     * Get aG1819cOleique.
      *
      * @return string
      */
@@ -1269,7 +1204,7 @@ class Ciqual
     }
 
     /**
-     * Set aG1829cLinoleique
+     * Set aG1829cLinoleique.
      *
      * @param string $aG1829cLinoleique
      *
@@ -1283,7 +1218,7 @@ class Ciqual
     }
 
     /**
-     * Get aG1829cLinoleique
+     * Get aG1829cLinoleique.
      *
      * @return string
      */
@@ -1293,7 +1228,7 @@ class Ciqual
     }
 
     /**
-     * Set aG183c9AlphaLinolenique
+     * Set aG183c9AlphaLinolenique.
      *
      * @param string $aG183c9AlphaLinolenique
      *
@@ -1307,7 +1242,7 @@ class Ciqual
     }
 
     /**
-     * Get aG183c9AlphaLinolenique
+     * Get aG183c9AlphaLinolenique.
      *
      * @return string
      */
@@ -1317,7 +1252,7 @@ class Ciqual
     }
 
     /**
-     * Set aG2045cArachidonique
+     * Set aG2045cArachidonique.
      *
      * @param string $aG2045cArachidonique
      *
@@ -1331,7 +1266,7 @@ class Ciqual
     }
 
     /**
-     * Get aG2045cArachidonique
+     * Get aG2045cArachidonique.
      *
      * @return string
      */
@@ -1341,7 +1276,7 @@ class Ciqual
     }
 
     /**
-     * Set aG2055cEPA
+     * Set aG2055cEPA.
      *
      * @param string $aG2055cEPA
      *
@@ -1355,7 +1290,7 @@ class Ciqual
     }
 
     /**
-     * Get aG2055cEPA
+     * Get aG2055cEPA.
      *
      * @return string
      */
@@ -1365,7 +1300,7 @@ class Ciqual
     }
 
     /**
-     * Set aG2264cDHA
+     * Set aG2264cDHA.
      *
      * @param string $aG2264cDHA
      *
@@ -1379,7 +1314,7 @@ class Ciqual
     }
 
     /**
-     * Get aG2264cDHA
+     * Get aG2264cDHA.
      *
      * @return string
      */
@@ -1389,7 +1324,7 @@ class Ciqual
     }
 
     /**
-     * Set cholesterol
+     * Set cholesterol.
      *
      * @param string $cholesterol
      *
@@ -1403,7 +1338,7 @@ class Ciqual
     }
 
     /**
-     * Get cholesterol
+     * Get cholesterol.
      *
      * @return string
      */
@@ -1413,7 +1348,7 @@ class Ciqual
     }
 
     /**
-     * Set selChlorureSodium
+     * Set selChlorureSodium.
      *
      * @param string $selChlorureSodium
      *
@@ -1427,7 +1362,7 @@ class Ciqual
     }
 
     /**
-     * Get selChlorureSodium
+     * Get selChlorureSodium.
      *
      * @return string
      */
@@ -1437,7 +1372,7 @@ class Ciqual
     }
 
     /**
-     * Set calcium
+     * Set calcium.
      *
      * @param string $calcium
      *
@@ -1451,7 +1386,7 @@ class Ciqual
     }
 
     /**
-     * Get calcium
+     * Get calcium.
      *
      * @return string
      */
@@ -1461,7 +1396,7 @@ class Ciqual
     }
 
     /**
-     * Set chlorure
+     * Set chlorure.
      *
      * @param string $chlorure
      *
@@ -1475,7 +1410,7 @@ class Ciqual
     }
 
     /**
-     * Get chlorure
+     * Get chlorure.
      *
      * @return string
      */
@@ -1485,7 +1420,7 @@ class Ciqual
     }
 
     /**
-     * Set cuivre
+     * Set cuivre.
      *
      * @param string $cuivre
      *
@@ -1499,7 +1434,7 @@ class Ciqual
     }
 
     /**
-     * Get cuivre
+     * Get cuivre.
      *
      * @return string
      */
@@ -1509,7 +1444,7 @@ class Ciqual
     }
 
     /**
-     * Set fer
+     * Set fer.
      *
      * @param string $fer
      *
@@ -1523,7 +1458,7 @@ class Ciqual
     }
 
     /**
-     * Get fer
+     * Get fer.
      *
      * @return string
      */
@@ -1533,7 +1468,7 @@ class Ciqual
     }
 
     /**
-     * Set iode
+     * Set iode.
      *
      * @param string $iode
      *
@@ -1547,7 +1482,7 @@ class Ciqual
     }
 
     /**
-     * Get iode
+     * Get iode.
      *
      * @return string
      */
@@ -1557,7 +1492,7 @@ class Ciqual
     }
 
     /**
-     * Set magnesium
+     * Set magnesium.
      *
      * @param string $magnesium
      *
@@ -1571,7 +1506,7 @@ class Ciqual
     }
 
     /**
-     * Get magnesium
+     * Get magnesium.
      *
      * @return string
      */
@@ -1581,7 +1516,7 @@ class Ciqual
     }
 
     /**
-     * Set manganese
+     * Set manganese.
      *
      * @param string $manganese
      *
@@ -1595,7 +1530,7 @@ class Ciqual
     }
 
     /**
-     * Get manganese
+     * Get manganese.
      *
      * @return string
      */
@@ -1605,7 +1540,7 @@ class Ciqual
     }
 
     /**
-     * Set phosphore
+     * Set phosphore.
      *
      * @param string $phosphore
      *
@@ -1619,7 +1554,7 @@ class Ciqual
     }
 
     /**
-     * Get phosphore
+     * Get phosphore.
      *
      * @return string
      */
@@ -1629,7 +1564,7 @@ class Ciqual
     }
 
     /**
-     * Set potassium
+     * Set potassium.
      *
      * @param string $potassium
      *
@@ -1643,7 +1578,7 @@ class Ciqual
     }
 
     /**
-     * Get potassium
+     * Get potassium.
      *
      * @return string
      */
@@ -1653,7 +1588,7 @@ class Ciqual
     }
 
     /**
-     * Set selenium
+     * Set selenium.
      *
      * @param string $selenium
      *
@@ -1667,7 +1602,7 @@ class Ciqual
     }
 
     /**
-     * Get selenium
+     * Get selenium.
      *
      * @return string
      */
@@ -1677,7 +1612,7 @@ class Ciqual
     }
 
     /**
-     * Set sodium
+     * Set sodium.
      *
      * @param string $sodium
      *
@@ -1691,7 +1626,7 @@ class Ciqual
     }
 
     /**
-     * Get sodium
+     * Get sodium.
      *
      * @return string
      */
@@ -1701,7 +1636,7 @@ class Ciqual
     }
 
     /**
-     * Set zinc
+     * Set zinc.
      *
      * @param string $zinc
      *
@@ -1715,7 +1650,7 @@ class Ciqual
     }
 
     /**
-     * Get zinc
+     * Get zinc.
      *
      * @return string
      */
@@ -1725,7 +1660,7 @@ class Ciqual
     }
 
     /**
-     * Set retinol
+     * Set retinol.
      *
      * @param string $retinol
      *
@@ -1739,7 +1674,7 @@ class Ciqual
     }
 
     /**
-     * Get retinol
+     * Get retinol.
      *
      * @return string
      */
@@ -1749,7 +1684,7 @@ class Ciqual
     }
 
     /**
-     * Set betaCarotene
+     * Set betaCarotene.
      *
      * @param string $betaCarotene
      *
@@ -1763,7 +1698,7 @@ class Ciqual
     }
 
     /**
-     * Get betaCarotene
+     * Get betaCarotene.
      *
      * @return string
      */
@@ -1773,7 +1708,7 @@ class Ciqual
     }
 
     /**
-     * Set vitamineD
+     * Set vitamineD.
      *
      * @param string $vitamineD
      *
@@ -1787,7 +1722,7 @@ class Ciqual
     }
 
     /**
-     * Get vitamineD
+     * Get vitamineD.
      *
      * @return string
      */
@@ -1797,7 +1732,7 @@ class Ciqual
     }
 
     /**
-     * Set vitamineE
+     * Set vitamineE.
      *
      * @param string $vitamineE
      *
@@ -1811,7 +1746,7 @@ class Ciqual
     }
 
     /**
-     * Get vitamineE
+     * Get vitamineE.
      *
      * @return string
      */
@@ -1821,7 +1756,7 @@ class Ciqual
     }
 
     /**
-     * Set vitamineK1
+     * Set vitamineK1.
      *
      * @param string $vitamineK1
      *
@@ -1835,7 +1770,7 @@ class Ciqual
     }
 
     /**
-     * Get vitamineK1
+     * Get vitamineK1.
      *
      * @return string
      */
@@ -1845,7 +1780,7 @@ class Ciqual
     }
 
     /**
-     * Set vitamineK2
+     * Set vitamineK2.
      *
      * @param string $vitamineK2
      *
@@ -1859,7 +1794,7 @@ class Ciqual
     }
 
     /**
-     * Get vitamineK2
+     * Get vitamineK2.
      *
      * @return string
      */
@@ -1869,7 +1804,7 @@ class Ciqual
     }
 
     /**
-     * Set vitamineC
+     * Set vitamineC.
      *
      * @param string $vitamineC
      *
@@ -1883,7 +1818,7 @@ class Ciqual
     }
 
     /**
-     * Get vitamineC
+     * Get vitamineC.
      *
      * @return string
      */
@@ -1893,7 +1828,7 @@ class Ciqual
     }
 
     /**
-     * Set vitamineB1
+     * Set vitamineB1.
      *
      * @param string $vitamineB1
      *
@@ -1907,7 +1842,7 @@ class Ciqual
     }
 
     /**
-     * Get vitamineB1
+     * Get vitamineB1.
      *
      * @return string
      */
@@ -1917,7 +1852,7 @@ class Ciqual
     }
 
     /**
-     * Set vitamineB2
+     * Set vitamineB2.
      *
      * @param string $vitamineB2
      *
@@ -1931,7 +1866,7 @@ class Ciqual
     }
 
     /**
-     * Get vitamineB2
+     * Get vitamineB2.
      *
      * @return string
      */
@@ -1941,7 +1876,7 @@ class Ciqual
     }
 
     /**
-     * Set vitamineB3
+     * Set vitamineB3.
      *
      * @param string $vitamineB3
      *
@@ -1955,7 +1890,7 @@ class Ciqual
     }
 
     /**
-     * Get vitamineB3
+     * Get vitamineB3.
      *
      * @return string
      */
@@ -1965,7 +1900,7 @@ class Ciqual
     }
 
     /**
-     * Set vitamineB5
+     * Set vitamineB5.
      *
      * @param string $vitamineB5
      *
@@ -1979,7 +1914,7 @@ class Ciqual
     }
 
     /**
-     * Get vitamineB5
+     * Get vitamineB5.
      *
      * @return string
      */
@@ -1989,7 +1924,7 @@ class Ciqual
     }
 
     /**
-     * Set vitamineB6
+     * Set vitamineB6.
      *
      * @param string $vitamineB6
      *
@@ -2003,7 +1938,7 @@ class Ciqual
     }
 
     /**
-     * Get vitamineB6
+     * Get vitamineB6.
      *
      * @return string
      */
@@ -2013,7 +1948,7 @@ class Ciqual
     }
 
     /**
-     * Set vitamineB9
+     * Set vitamineB9.
      *
      * @param string $vitamineB9
      *
@@ -2027,7 +1962,7 @@ class Ciqual
     }
 
     /**
-     * Get vitamineB9
+     * Get vitamineB9.
      *
      * @return string
      */
@@ -2037,7 +1972,7 @@ class Ciqual
     }
 
     /**
-     * Set vitamineB12
+     * Set vitamineB12.
      *
      * @param string $vitamineB12
      *
@@ -2051,7 +1986,7 @@ class Ciqual
     }
 
     /**
-     * Get vitamineB12
+     * Get vitamineB12.
      *
      * @return string
      */

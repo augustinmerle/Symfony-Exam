@@ -3,12 +3,9 @@
 namespace CiqualBundle\Command;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
-use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
-use AppBundle\Entity\Cirqual;
-
 
 class FmuCiqualImporterCommand extends ContainerAwareCommand
 {
@@ -17,7 +14,6 @@ class FmuCiqualImporterCommand extends ContainerAwareCommand
         $this
             ->setName('fmu:ciqual-importer')
             ->setDescription('command to import Ciqual data from local or distant')
-            //->addArgument('local', InputArgument::OPTIONAL, 'local csv file')
             ->addOption('local', null, InputOption::VALUE_OPTIONAL, 'local csv file')
         ;
     }
@@ -30,18 +26,13 @@ class FmuCiqualImporterCommand extends ContainerAwareCommand
 
         if ($argument != null) {
             $data = $this->getContainer()->get('fmu.ciqual.aggregator.data')->getCiqualByLocalFile($argument);
-        }
-        else {
+        } else {
             try {
                 $data = $this->getContainer()->get('fmu.ciqual.aggregator.data')->getCiqualByUrl();
-            }
-            catch (\Exception $e) {
+            } catch (\Exception $e) {
                 $output->writeln($e->getMessage());
             }
         }
-
         $output->writeln('Command finished.');
-
     }
-
 }
