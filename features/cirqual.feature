@@ -1,14 +1,14 @@
-Feature: Manage Cirqual object
-  In order to manage books and their reviews
+Feature: Manage Ciqual object
+  In order to manage cirquals
   As a client software developer
   I need to be able to retrieve, create, update and delete them trough the API.
 
   # the "@createSchema" annotation provided by API Platform creates a temporary SQLite database for testing the API
   @createSchema
-  Scenario: Create a Cirqual
+  Scenario: Create a Ciqual
     When I add "Content-Type" header equal to "application/ld+json"
     And I add "Accept" header equal to "application/ld+json"
-    And I send a "POST" request to "/cirquals" with body:
+    And I send a "POST" request to "/ciquals" with body:
     """
     {
       "ORIGGPCD": "01.1",

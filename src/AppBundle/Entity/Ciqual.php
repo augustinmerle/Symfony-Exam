@@ -14,7 +14,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  *      "filters"={"ciqual.search", "ciqual.search.name"}
  *    },
  *    itemOperations={
- *      "get"={"method"="GET", "path"="/cirqual/{ORIGFDCD}"}
+ *      "get"={"method"="GET", "path"="/cirqual/{id}"}
  *    }
  *
  * )
