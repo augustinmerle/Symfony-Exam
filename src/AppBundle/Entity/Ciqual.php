@@ -11,10 +11,10 @@ use Symfony\Component\Validator\Constraints as Assert;
  *
  * @ApiResource(
  *    attributes={
- *      "filters"={"cirqual.search"}
+ *      "filters"={"ciqual.search", "ciqual.search.name"}
  *    },
  *    itemOperations={
- *      "get"={"method"="GET", "path"="/cirqual/{ORIGFDCD}"}
+ *      "get"={"method"="GET", "path"="/cirqual/{id}"}
  *    }
  *
  * )
@@ -35,7 +35,7 @@ class Ciqual
      * @var string Something else
      *
      * @ORM\Column(type="string", nullable=true)
-     * @Assert\NotBlank
+     * 
      */
     private $ORIGGPCD;
 
@@ -43,7 +43,7 @@ class Ciqual
      * @var string ingredient cat
      *
      * @ORM\Column(type="string", nullable=true)
-     * @Assert\NotBlank
+     *
      */
     private $ORIGGPFR;
 
@@ -51,7 +51,7 @@ class Ciqual
      * @var string ingredient hash
      *
      * @ORM\Column(type="string", nullable=true)
-     * @Assert\NotBlank
+     *
      */
     private $ORIGFDCD;
 

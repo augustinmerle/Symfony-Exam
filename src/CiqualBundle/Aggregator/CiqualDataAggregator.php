@@ -39,6 +39,7 @@ class CiqualDataAggregator
         $responseDecoded = $serializer->decode($data, 'csv');
         foreach ($responseDecoded as $line)
         {
+
             $this->ciqualManager->createNewCirqual($serializer->denormalize($line, Ciqual::class, 'csv' ));
         }
 

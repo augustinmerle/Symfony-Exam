@@ -78,19 +78,13 @@ class CiqualNameConverter implements NameConverterInterface
      */
     private $attributes;
 
-    /**
-     * @var bool
-     */
-    private $lowerCamelCase;
 
     /**
      * @param null|array $attributes     The list of attributes to rename or null for all attributes
-     * @param bool       $lowerCamelCase Use lowerCamelCase style
      */
     public function __construct(array $attributes = null, $lowerCamelCase = true)
     {
         $this->attributes = $attributes;
-        $this->lowerCamelCase = $lowerCamelCase;
     }
 
 
@@ -102,7 +96,6 @@ class CiqualNameConverter implements NameConverterInterface
     public function denormalize($propertyName)
     {
         // remove org_ prefix
-      //  var_dump($propertyName);
         return array_key_exists($propertyName,$this->fields)? $this->fields[$propertyName]:$propertyName;
     }
 }

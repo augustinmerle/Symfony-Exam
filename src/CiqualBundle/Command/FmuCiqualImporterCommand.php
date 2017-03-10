@@ -26,6 +26,7 @@ class FmuCiqualImporterCommand extends ContainerAwareCommand
     {
         $argument = $input->getOption('local');
         $data = [];
+        $output->writeln('Début import Table Ciqual');
 
         if ($argument != null) {
             $data = $this->getContainer()->get('fmu.ciqual.aggregator.data')->getCiqualByLocalFile($argument);
@@ -38,13 +39,7 @@ class FmuCiqualImporterCommand extends ContainerAwareCommand
                 $output->writeln($e->getMessage());
             }
         }
-        $output->writeln('Début import Table Ciqual');
 
-        //var_dump($data);die;
-        foreach($data as $object)
-        {
-            $this->getContainer()->get('fmu.ciqual.manager')->createNewCirqual($object);
-        }
         $output->writeln('Command finished.');
 
     }
